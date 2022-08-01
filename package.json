@@ -10,6 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@aws-cdk/aws-elasticbeanstalk": "1.166.1",
+    "@aws-cdk/aws-iam": "1.166.1",
+    "@aws-cdk/aws-s3-assets": "1.166.1",
+    "@aws-cdk/core": "^1.166.1",
     "express": "^4.18.1"
   }
 }
