@@ -4,7 +4,7 @@ import * as elasticbeanstalk from '@aws-cdk/aws-elasticbeanstalk';
 import iam = require('@aws-cdk/aws-iam');
 
 export class CdkEbInfraStack extends cdk.Stack {
-  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
+  constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
     // construct S3 asset from zip filenpm i @aws-cdk/aws-iam
@@ -75,7 +75,7 @@ export class CdkEbInfraStack extends cdk.Stack {
     const elbEnv = new elasticbeanstalk.CfnEnvironment(this, 'Environment', {
       environmentName: 'MyWebAppEnvironment',
       applicationName: app.applicationName || appName,
-      solutionStackName: '64bit Amazon Linux 2 v5.4.4 running Node.js 14',
+      solutionStackName: '64bit Amazon Linux 2 v5.5.4 running Node.js 16',
       optionSettings: optionSettingProperties,
       versionLabel: appVersionProps.ref,
     });
